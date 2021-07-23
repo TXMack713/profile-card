@@ -15,3 +15,9 @@ body {
   -moz-box-sizing: border-box;
   font-size: 16px;
 }
+
+/* Mobile Styles */
+body {
+  background: url("/images/bg-pattern-top.svg") no-repeat top center fixed;
+  background: url("/images/bg-pattern-bottom.svg") no-repeat bottom center fixed;
+}
