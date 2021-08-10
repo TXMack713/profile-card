@@ -20,4 +20,7 @@ body {
 body {
   background: url("/images/bg-pattern-top.svg") no-repeat top center fixed;
   background: url("/images/bg-pattern-bottom.svg") no-repeat bottom center fixed;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
 }
