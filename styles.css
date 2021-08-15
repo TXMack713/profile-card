@@ -20,23 +20,27 @@ body {
 body {
   display: grid;
   grid: repeat(8, 1fr) / 1fr;
+  background-color: hsl(185, 75%, 39%);
+  background: url("/images/bg-pattern-top.svg") no-repeat top left fixed;
+  background: url("/images/bg-pattern-bottom.svg") no-repeat bottom right fixed;
 }
-
+/* 
 .upper {
   grid-area: 1 / 1 / 5;
-  background: url('/images/bg-pattern-top.svg') no-repeat top center fixed;
+  background: url("/images/bg-pattern-top.svg") no-repeat top left fixed;
   z-index: auto;
+  block-size: 50%;
 }
 
 .lower {
   grid-area: 5 / 1 / 9;
-  background: url('/images/bg-pattern-bottom.svg') no-repeat bottom center fixed;
+  background: url("/images/bg-pattern-bottom.svg") no-repeat bottom right fixed;
   z-index: auto;
-}
+  block-size: 50%;
+} */
 
 .card {
-  background: url('/images/bg-pattern-top.svg') no-repeat top center fixed;
-  background: url('/images/bg-pattern-bottom.svg') no-repeat bottom center fixed;
+  grid-area: 3 / 1 / 7;
   display: grid;
   grid: repeat(8, 1fr) / 1fr;
   justify-content: center;
