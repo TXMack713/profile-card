@@ -24,9 +24,8 @@ body {
     justify-content: center;
     align-items: center;
     background-color: hsl(185, 75%, 39%);
-    background: url('/images/bg-pattern-top.svg') no-repeat top left fixed;
-    background: url('/images/bg-pattern-bottom.svg') no-repeat bottom right
-      fixed;
+    background: url('/images/bg-pattern-top.svg'),
+      url('/images/bg-pattern-bottom.svg') no-repeat bottom right fixed;
   }
 
   .card {
