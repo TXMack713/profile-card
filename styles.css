@@ -64,6 +64,10 @@ body {
     align-items: center;
   }
 
+  .location {
+    font-size: 0.75rem;
+  }
+
   .row {
     grid-area: 6/1/7/2;
     display: flex;
