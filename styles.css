@@ -13,7 +13,8 @@ body {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  font-size: 16px;
+  font-size: 18px;
+  font-family: 'Kumbh Sans', sans-serif;
 }
 
 /* Mobile Styles */
@@ -25,12 +26,12 @@ body {
     align-items: center;
     background-color: hsl(185, 75%, 39%);
     background: url('/images/bg-pattern-top.svg'),
-      url('/images/bg-pattern-bottom.svg') no-repeat bottom right fixed;
+      url('/images/bg-pattern-bottom.svg');
   }
 
   .card {
     block-size: 70%;
-    max-inline-size: 35rem;
+    max-inline-size: 30rem;
     justify-self: center;
     align-self: center;
     display: grid;
@@ -44,6 +45,7 @@ body {
     border-radius: 50%;
     justify-self: center;
     align-self: center;
+    border: 0.25rem solid white;
   }
 
   header {
