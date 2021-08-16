@@ -17,53 +17,60 @@ body {
 }
 
 /* Mobile Styles */
-body {
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
-  align-items: center;
-  background-color: hsl(185, 75%, 39%);
-  background: url('/images/bg-pattern-top.svg') no-repeat top left fixed;
-  background: url('/images/bg-pattern-bottom.svg') no-repeat bottom right fixed;
-}
+@media screen and (max-width: 60rem) {
+  body {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(185, 75%, 39%);
+    background: url('/images/bg-pattern-top.svg') no-repeat top left fixed;
+    background: url('/images/bg-pattern-bottom.svg') no-repeat bottom right
+      fixed;
+  }
 
-.card {
-  display: grid;
-  grid: repeat(8, 1fr) / 1fr;
-  justify-content: center;
-  justify-self: center;
-  align-items: stretch;
-}
+  .card {
+    block-size: 70vh;
+    align-self: center;
+    display: grid;
+    grid: repeat(8, 1fr) / 1fr;
+    justify-content: center;
+    justify-self: center;
+    align-items: stretch;
+  }
 
-img {
-  border-radius: 40%;
-}
+  img {
+    grid-area: 3 / 1 / 4 / 2;
+    border-radius: 40%;
+    align-self: center;
+  }
 
-header {
-  grid-area: 5/3/6/6;
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-  justify-content: center;
-}
+  header {
+    grid-area: 5/1/6/2;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+  }
 
-.intro {
-  min-inline-size: 100%;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-evenly;
-  align-items: center;
-}
+  .intro {
+    min-inline-size: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+  }
 
-.row {
-  grid-area: 6/2/7/7;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-around;
-  align-items: flex-end;
-}
+  .row {
+    grid-area: 6/1/7/2;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: flex-end;
+  }
 
-.attribution {
-  justify-content: center;
-  align-items: end;
+  .attribution {
+    justify-content: space-between;
+    align-self: center;
+  }
 }
