@@ -29,7 +29,8 @@ body {
   }
 
   .card {
-    block-size: 70vh;
+    block-size: 70%;
+    max-inline-size: 35rem;
     align-self: center;
     display: grid;
     grid: repeat(8, 1fr) / 1fr;
