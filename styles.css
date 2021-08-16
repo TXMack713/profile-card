@@ -67,18 +67,18 @@ body {
     min-inline-size: 100%;
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
   }
 
   .intro > p {
     font-size: 1rem;
-    
   }
 
-.intro > .name {
-  font-weight: 700;
-}
+  .intro > .name {
+    font-weight: 700;
+    margin-right: 0.5rem;
+  }
 
   .location {
     font-size: 0.75rem;
