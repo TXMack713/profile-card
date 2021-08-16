@@ -30,7 +30,8 @@ body {
   }
 
   .card {
-    block-size: 70%;
+    margin-top: 10%;
+    block-size: 65%;
     min-inline-size: 20rem;
     max-inline-size: 30rem;
     justify-self: center;
@@ -39,12 +40,19 @@ body {
     grid: repeat(9, minmax(2rem, 1fr)) / 1fr;
     justify-content: center;
     align-items: stretch;
+    border: 2px solid blue;
+    border-radius: 1.25rem;
   }
 
   .upper {
     z-index: -1;
-    background: url('./images/bg-patter-card.svg') no-repeat center center fixed;
+    background-color: hsl(185, 75%, 39%);
+/*     background: url('./images/bg-patter-card.svg') no-repeat center center fixed; */
     grid-area: 1 / 1 / 4 / 2;
+/*     border: 2px solid blue; */
+border-top-left-radius: 1.25rem;
+border-top-right-radius: 1.25rem;
+/*     border-radius: 1.25rem; */
   }
 
   img {
