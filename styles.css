@@ -24,9 +24,10 @@ body {
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
-    background-color: hsl(185, 75%, 39%);
-    background: url('/images/bg-pattern-top.svg'),
+    background-image: url('/images/bg-pattern-top.svg'),
       url('/images/bg-pattern-bottom.svg');
+    background-position: top left, bottom right;
+    background-repeat: no-repeat;
   }
 
   .card {
@@ -46,13 +47,11 @@ body {
 
   .upper {
     z-index: -1;
-    background-color: hsl(185, 75%, 39%);
-    /*     background: url('./images/bg-patter-card.svg') no-repeat center center fixed; */
+    /* background-color: hsl(185, 75%, 39%); */
+    background: url('./images/bg-patter-card.svg') no-repeat center center fixed;
     grid-area: 1 / 1 / 4 / 2;
-    /*     border: 2px solid blue; */
     border-top-left-radius: 1.25rem;
     border-top-right-radius: 1.25rem;
-    /*     border-radius: 1.25rem; */
   }
 
   img {
