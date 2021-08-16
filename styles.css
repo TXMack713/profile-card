@@ -31,17 +31,18 @@ body {
   .card {
     block-size: 70%;
     max-inline-size: 35rem;
+    justify-self: center;
     align-self: center;
     display: grid;
     grid: repeat(8, 1fr) / 1fr;
     justify-content: center;
-    justify-self: center;
     align-items: stretch;
   }
 
   img {
     grid-area: 3 / 1 / 4 / 2;
-    border-radius: 40%;
+    border-radius: 50%;
+    justify-self: center;
     align-self: center;
   }
 
