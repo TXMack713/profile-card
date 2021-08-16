@@ -25,21 +25,27 @@ body {
     justify-content: center;
     align-items: center;
     background-color: hsl(185, 75%, 39%);
-    /* background-image: url('./images/bg-pattern-top.svg'),
-      url('./images/bg-pattern-bottom.svg');
-    background-position: top left, bottom right;
-    background-repeat: no-repeat; */
   }
 
-  .upper {
-    background: url('./images/bg-pattern-top.svg') no-repeat top left fixed;
+  body::before {
+    content: '';
+    position: absolute;
+    inline-size: 100%;
+    block-size: 100%;
+    top: -50%;
+    left: -50%;
+    z-index: -1;
+    background: url('./images/bg-pattern-top.svg') no-repeat;
     transform: rotate(90deg);
   }
 
-  .lower {
+  body::after {
+    position: relative;
     background: url('./images/bg-pattern-bottom.svg') no-repeat bottom right
       fixed;
     transform: rotate(-90deg);
+    block-size: 50%;
+    z-index: -1;
   }
 
   .card {
@@ -58,11 +64,22 @@ body {
   }
 
   .upper2 {
-    z-index: -1;
-    background: url('./images/bg-patter-card.svg') no-repeat center center fixed;
     grid-area: 1 / 1 / 4 / 2;
     border-top-left-radius: 1.25rem;
     border-top-right-radius: 1.25rem;
+    inline-size: 100%;
+    block-size: 100%;
+  }
+
+  .upper2::before {
+    content: '';
+    position: absolute;
+    background-image: url('./images/bg-patter-card.svg');
+    position: absolute;
+    top: 0;
+    left: 0;
+    inline-size: 100%;
+    block-size: 100%;
   }
 
   img {
