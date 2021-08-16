@@ -35,13 +35,19 @@ body {
     justify-self: center;
     align-self: center;
     display: grid;
-    grid: repeat(8, 1fr) / 1fr;
+    grid: repeat(9, 1fr) / 1fr;
     justify-content: center;
     align-items: stretch;
   }
 
+  .upper {
+    z-index: -1;
+    background: url('./images/bg-patter-card.svg') no-repeat center center fixed;
+    grid-area: 1 / 1 / 4 / 2;
+  }
+
   img {
-    grid-area: 3 / 1 / 4 / 2;
+    grid-area: 3 / 1 / 5 / 2;
     border-radius: 50%;
     justify-self: center;
     align-self: center;
@@ -49,7 +55,7 @@ body {
   }
 
   header {
-    grid-area: 5/1/6/2;
+    grid-area: 5/1/7/2;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
@@ -68,8 +74,16 @@ body {
     font-size: 0.75rem;
   }
 
+  .numbers {
+    font-size: 1rem;
+  }
+
+  .category {
+    font-size: 0.5rem;
+  }
+
   .row {
-    grid-area: 6/1/7/2;
+    grid-area: 8/1/10/2;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-around;
