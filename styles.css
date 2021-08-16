@@ -56,7 +56,7 @@ body {
   }
 
   header {
-    grid-area: 5/1/7/2;
+    grid-area: 6/1/7/2;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
@@ -81,6 +81,7 @@ body {
   }
 
   .location {
+    margin-top: 0.02rem;
     font-size: 0.75rem;
     font-weight: 400;
   }
