@@ -27,7 +27,7 @@ body {
     background-color: hsl(185, 75%, 39%);
   }
 
-  body::after {
+  body::before {
     content: '';
     position: absolute;
     inline-size: 100%;
@@ -39,13 +39,17 @@ body {
     transform: rotate(90deg);
   }
 
-  body::after {
-    position: relative;
+  body::before {
+    content: '';
+    position: absolute;
     background: url('./images/bg-pattern-bottom.svg') no-repeat bottom right
       fixed;
-    transform: rotate(-90deg);
-    block-size: 50%;
+    block-size: 100%;
+    inline-size: 100%;
+    bottom: 50%;
+    right: 50%;
     z-index: -1;
+    transform: rotate(-90deg);
   }
 
   .card {
