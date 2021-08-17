@@ -18,7 +18,7 @@ body {
 }
 
 /* Mobile Styles */
-@media screen and (max-width: 60rem) {
+@media screen and (max-width: 120rem) {
   body {
     display: flex;
     flex-flow: column wrap;
@@ -51,14 +51,14 @@ body {
   .card {
     margin-top: 10%;
     margin-bottom: 5%;
-    block-size: 65%;
+    block-size: 25rem;
     inline-size: 18rem;
     justify-self: center;
     align-self: center;
     display: grid;
     grid: repeat(9, minmax(2rem, 1fr)) / 1fr;
     justify-content: center;
-    align-items: stretch;
+    align-items: center;
     border: 2px solid blue;
     border-radius: 1.25rem;
   }
