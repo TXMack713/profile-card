@@ -75,7 +75,6 @@ body {
     content: '';
     position: absolute;
     background-image: url('./images/bg-patter-card.svg');
-    position: absolute;
     top: 0;
     left: 0;
     inline-size: 100%;
