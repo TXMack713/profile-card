@@ -18,7 +18,7 @@ body {
 }
 
 /* Mobile Styles */
-@media screen and (max-width: 120rem) {
+@media screen and (max-width: 50rem) {
   body {
     display: flex;
     flex-flow: column wrap;
@@ -36,18 +36,163 @@ body {
     left: -50%;
     z-index: -1;
     background: url('./images/bg-pattern-top.svg') no-repeat;
+    background-size: 100%;
+  }
+
+  body::after {
+    content: '';
+    position: absolute;
+    background: url('./images/bg-pattern-bottom.svg') no-repeat;
+    background-size: 100%;
+    block-size: 100%;
+    inline-size: 100%;
+    bottom: -70%;
+    right: -50%;
+    z-index: -1;
     transform: rotate(90deg);
+  }
+
+  .card {
+    margin-top: 25%;
+    margin-bottom: 10%;
+    block-size: 22rem;
+    inline-size: 18rem;
+    justify-self: center;
+    align-self: center;
+    display: grid;
+    grid: repeat(10, minmax(2rem, 1fr)) / 1fr;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1.25rem;
+    background-color: white;
+  }
+
+  .upper2 {
+    grid-area: 1 / 1 / 5 / 2;
+    border-top-left-radius: 1.25rem;
+    border-top-right-radius: 1.25rem;
+    inline-size: 100%;
+    block-size: 100%;
+    background-image: url('./images/bg-pattern-card.svg');
+  }
+
+  img {
+    grid-area: 3 / 1 / 7 / 2;
+    border-radius: 50%;
+    justify-self: center;
+    align-self: center;
+    border: 0.25rem solid white;
+  }
+
+  header {
+    grid-area: 7/1/8/2;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 1.0625;
+  }
+
+  .intro {
+    min-inline-size: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+  }
+
+  .intro > p {
+    font-size: 1rem;
+  }
+
+  .intro > .name {
+    font-weight: 700;
+    margin-right: 0.5rem;
+  }
+
+  .age {
+    color: hsl(0, 0%, 59%);
+  }
+
+  .location {
+    font-size: 0.75rem;
+    font-weight: 400;
+    margin-top: 0.02rem;
+    letter-spacing: 1.25;
+    color: hsl(0, 0%, 59%);
+  }
+
+  .numbers {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  .category {
+    font-size: 0.625rem;
+    font-weight: 400;
+    letter-spacing: 1.25;
+    color: hsl(0, 0%, 59%);
+  }
+
+  .row {
+    grid-area: 9/1/10/2;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 7.5%;
+    border-top: 1px dotted hsl(0, 0%, 59%);
+  }
+
+  .followers {
+    margin-right: 2.5rem;
+  }
+
+  .likes {
+    margin-right: 2.5rem;
+  }
+
+  .attribution {
+    justify-content: flex-end;
+    align-self: center;
+  }
+}
+
+/*Desktop Layout*/
+@media screen and (min-width: 50rem) {
+  body {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(185, 75%, 39%);
   }
 
   body::before {
     content: '';
     position: absolute;
-    background: url('./images/bg-pattern-bottom.svg') no-repeat bottom right
-      fixed;
-    block-size: 100%;
     inline-size: 100%;
+    block-size: 100%;
+    top: -50%;
+    left: -50;
+    z-index: -1;
+    background: url('./images/bg-pattern-top.svg') no-repeat;
+    background-size: 100%;
+    transform: rotate(90deg);
+  }
+
+  body::after {
+    content: '';
+    position: absolute;
+    background: url('./images/bg-pattern-bottom.svg') no-repeat;
+    background-size: 100%;
+    block-size: 200%;
+    inline-size: 200%;
     bottom: 50%;
-    right: 50%;
+    right: -100%;
     z-index: -1;
     transform: rotate(-90deg);
   }
@@ -144,7 +289,7 @@ body {
     align-items: center;
     text-align: center;
     margin-top: 7.5%;
-    border-top: 1px ridge hsl(0, 0%, 59%);
+    border-top: 1px dotted hsl(0, 0%, 59%);
   }
 
   .followers {
@@ -159,4 +304,3 @@ body {
     justify-content: flex-end;
     align-self: center;
   }
-}
