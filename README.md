@@ -1,87 +1,104 @@
-# Frontend Mentor - Profile card component
+# Frontend Mentor - Profile card component solution
 
-![Design preview for the Profile card component coding challenge](./design/desktop-preview.jpg)
+This is a solution to the [Profile card component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/profile-card-component-cfArpWshJ). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
-## Welcome! 👋
+## Table of contents
 
-Thanks for checking out this front-end coding challenge.
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
+## Overview
 
-**To do this challenge, you need a basic understanding of HTML and CSS.**
+### The challenge
 
-## The challenge
+- Build out the project to the designs provided
 
-Your challenge is to build out this profile card component and get it looking as close to the design as possible.
+### Screenshot
 
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
 
-Want some support on the challenge? [Join our Slack community](https://www.frontendmentor.io/slack) and ask questions in the **#help** channel.
+![](images/Frontend Mentor - Profile card component - screenshot.png)
 
-## Where to find everything
+### Links
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design. 
+- Solution URL: [GitHub/TXMack713](https://github.com/TXMack713/profile-card)
+- Live Site URL: [GitHub Pages](https://txmack713.github.io/profile-card/)
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`. 
+## My process
 
-If you would like the design files (we provide Sketch & Figma versions) to inspect the design in more detail, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
+I began by building out the mobile layout first and then proceeded to tweak the design until I was able to position the background images to my satisfaction. I Googled and checked StackOverflow for solutions until I was able to locate advice that informed me what specifically to target until the background circle images were both on the screen in a manner I could comfortably manipulate.
 
-You will find all the required assets in the `/images` folder. The assets are already optimized.
+After being mostly satisfied with the mobile layout, I began developing the desktop layout and used what I learned in positioning the background images in the mobile layout to position the circles on the desktop layout. After finishing, I revisited the line-height setting of the header to position the name and age info of the card closer to the location information.
+### Built with
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- CSS Grid
+- Mobile-first workflow
 
-## Building your project
+### What I learned
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+I learned that by targeting the html::before and html::after selectors, I was able to position the circles on the page in a manner that greatly reduced the tendency of the images to move as the screen width was dynamically adjusted. Additionally, by targeting the top and bottom margins of the card, I was able to create the spacing I desired to keep the contents of the page visible on the screen. Finally, by specifying that the max-inline-size of the body element was 100vw and setting overflow to hidden, I was able to limit the accessible portion of the page directly to what was visible.
 
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+```css
+body {
+display: flex;
+flex-flow: column wrap;
+justify-content: center;
+align-items: center;
+background-color: hsl(185, 75%, 39%);
+margin: 0 auto;
+max-inline-size: 100vw;
+}
 
-## Deploying your project
+html::before {
+content: '';
+position: absolute;
+inline-size: 100%;
+block-size: 100%;
+top: -50%;
+left: -50%;
+z-index: -1;
+background: url('./images/bg-pattern-top.svg') no-repeat;
+background-size: 100%;
+transform: rotate(180deg);
+}
 
-As mentioned above, there are many ways to host your project for free. Our recommend hosts are:
+html::after {
+content: '';
+position: absolute;
+background: url('./images/bg-pattern-bottom.svg') no-repeat;
+background-size: 100%;
+block-size: 100%;
+inline-size: 100%;
+top: 50%;
+left: 50%;
+z-index: -1;
+}
+```
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+### Continued development
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
+I will continue to develop projects from Frontend Mentor to become far more proficient in developing mockups far more quickly, but I'm also working through MDN's JavaScript portion of their learn web development curriculum. I am also concurrently working through the 2nd edition of Object-Oriented JavaScript so that I can begin adding challenges that require HTML, CSS, & JavaScript to my repertoire.
 
-## Create a custom `README.md`
+### Useful resources
 
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
+- The MDN Web Docs (https://developer.mozilla.org/en-US/), W3Schools (http://w3schools.com), StackOverflow (stackoverflow.com) and Kevin Powell's YouTube channel (https://www.youtube.com/user/KepowOb) were quite instrumental in helping me along the way.
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
+## Author
 
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
+- Website - [Anthony Mack](https://github.com/TXMack713/)
+- Frontend Mentor - [@TXMack713](https://www.frontendmentor.io/profile/txmack713)
 
-## Submitting your solution
+## Acknowledgments
 
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
-
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
-
-## Sharing your solution
-
-There are multiple places you can share your solution:
-
-1. Share your solution page in the **#finished-projects** channel of the [Slack community](https://www.frontendmentor.io/slack). 
-2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on other social channels like LinkedIn.
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
-
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
-
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
-
-## Got feedback for us?
-
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
-
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
-
-**Have fun building!** 🚀
+Many thanks to the community over at StackOverflow for all the questions and answers that had already been asked and answered that provided ready-to-use solutions for what I was searching for answers for.

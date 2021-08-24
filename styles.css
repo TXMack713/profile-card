@@ -1,11 +1,11 @@
 html {
-  min-block-size: 100%;
+  block-size: 100%;
 }
 
 body {
   margin: 0;
   padding: 0;
-  overflow: auto;
+  overflow: hidden;
   word-break: keep-all;
   hyphens: none;
   -webkit-hyphens: none;
@@ -18,16 +18,18 @@ body {
 }
 
 /* Mobile Styles */
-@media screen and (max-width: 50rem) {
+@media screen and (max-width: 35rem) {
   body {
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
     background-color: hsl(185, 75%, 39%);
+    margin: 0 auto;
+    max-inline-size: 100vw;
   }
 
-  body::before {
+  html::before {
     content: '';
     position: absolute;
     inline-size: 100%;
@@ -37,24 +39,23 @@ body {
     z-index: -1;
     background: url('./images/bg-pattern-top.svg') no-repeat;
     background-size: 100%;
+    transform: rotate(180deg);
   }
 
-  body::after {
+  html::after {
     content: '';
     position: absolute;
     background: url('./images/bg-pattern-bottom.svg') no-repeat;
     background-size: 100%;
     block-size: 100%;
     inline-size: 100%;
-    bottom: -70%;
-    right: -50%;
+    top: 50%;
+    left: 50%;
     z-index: -1;
-    transform: rotate(90deg);
   }
 
   .card {
-    margin-top: 25%;
-    margin-bottom: 10%;
+    margin: 15% auto 1%;
     block-size: 22rem;
     inline-size: 18rem;
     justify-self: center;
@@ -91,6 +92,7 @@ body {
     align-items: center;
     justify-content: center;
     letter-spacing: 1.0625;
+    line-height: 0.5rem;
   }
 
   .intro {
@@ -118,9 +120,9 @@ body {
   .location {
     font-size: 0.75rem;
     font-weight: 400;
-    margin-top: 0.02rem;
     letter-spacing: 1.25;
     color: hsl(0, 0%, 59%);
+    margin-top: 0;
   }
 
   .numbers {
@@ -162,44 +164,44 @@ body {
 }
 
 /*Desktop Layout*/
-@media screen and (min-width: 50rem) {
+@media screen and (min-width: 35rem) {
   body {
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
     background-color: hsl(185, 75%, 39%);
+    max-block-size: 100%;
+    max-inline-size: 100vw;
   }
 
-  body::before {
+  html::before {
     content: '';
     position: absolute;
     inline-size: 100%;
     block-size: 100%;
-    top: -50%;
-    left: -50;
+    top: -60%;
+    left: -40%;
     z-index: -1;
     background: url('./images/bg-pattern-top.svg') no-repeat;
     background-size: 100%;
-    transform: rotate(90deg);
+    transform: rotate(180deg);
   }
 
-  body::after {
+  html::after {
     content: '';
     position: absolute;
     background: url('./images/bg-pattern-bottom.svg') no-repeat;
     background-size: 100%;
-    block-size: 200%;
-    inline-size: 200%;
-    bottom: 50%;
-    right: -100%;
+    block-size: 100%;
+    inline-size: 100%;
+    bottom: -60%;
+    right: -42.5%;
     z-index: -1;
-    transform: rotate(-90deg);
   }
 
   .card {
-    margin-top: 25%;
-    margin-bottom: 10%;
+    margin: 15% auto 1%;
     block-size: 22rem;
     inline-size: 18rem;
     justify-self: center;
@@ -236,6 +238,7 @@ body {
     align-items: center;
     justify-content: center;
     letter-spacing: 1.0625;
+    line-height: 0.5rem;
   }
 
   .intro {
@@ -245,6 +248,7 @@ body {
     justify-content: center;
     align-items: center;
     font-weight: 700;
+    margin-bottom: 0;
   }
 
   .intro > p {
@@ -263,9 +267,9 @@ body {
   .location {
     font-size: 0.75rem;
     font-weight: 400;
-    margin-top: 0.02rem;
     letter-spacing: 1.25;
     color: hsl(0, 0%, 59%);
+    margin-top: 0;
   }
 
   .numbers {
@@ -304,3 +308,4 @@ body {
     justify-content: flex-end;
     align-self: center;
   }
+}
